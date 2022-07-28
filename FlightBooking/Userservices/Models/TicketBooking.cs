@@ -22,6 +22,8 @@ namespace Userservices.Models
         public string MealType { get; set; }
         public string SeatNumbers { get; set; }
         public string Pnr { get; set; }
+        public int FinalPrice { get; set; }
         public int IsCancelled { get; set; }
+        public string CouponApplied { get; set; }
     }
 }

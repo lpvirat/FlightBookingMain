@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Consul/1.6.10.6": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Consul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Consul.dll": {}
+        }
+      },
       "FluentValidation/7.6.104": {
         "type": "package",
         "dependencies": {
@@ -2669,6 +2681,19 @@
           "lib/netstandard2.0/Ocelot.dll": {}
         }
       },
+      "Ocelot.Provider.Consul/13.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Consul": "0.7.2.6",
+          "Ocelot": "13.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Ocelot.Provider.Consul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ocelot.Provider.Consul.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -4389,6 +4414,19 @@
     }
   },
   "libraries": {
+    "Consul/1.6.10.6": {
+      "sha512": "Rt0uQw8f8wtRDwp1B5NIemC094jbkOv3b3Jzy9HOc0FIAJhMEaSRpcZCzjLGKMvPAfw7TKxy07CiYMNXvbMARA==",
+      "type": "package",
+      "path": "consul/1.6.10.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "consul.1.6.10.6.nupkg.sha512",
+        "consul.nuspec",
+        "lib/net461/Consul.dll",
+        "lib/netstandard2.0/Consul.dll"
+      ]
+    },
     "FluentValidation/7.6.104": {
       "sha512": "amvsYOH/wHosZ/sUPj6w+JN56e49+mNNewfw+tVRpaMbBaAVOnP6DvFzVgD0IxUpMrwl1D9CGyGNO1gZro2XBw==",
       "type": "package",
@@ -7198,6 +7236,18 @@
         "lib/netstandard2.0/Ocelot.dll",
         "ocelot.13.0.0.nupkg.sha512",
         "ocelot.nuspec"
+      ]
+    },
+    "Ocelot.Provider.Consul/13.0.0": {
+      "sha512": "7Ngamd2ilIQPGj3dIcOXXXd+2dkAvzYlA9cY3Ms8MgJ5siw/qMP2KAwIx0ruQlKkdTxKa06ZzcLnmqhw5BAotg==",
+      "type": "package",
+      "path": "ocelot.provider.consul/13.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Ocelot.Provider.Consul.dll",
+        "ocelot.provider.consul.13.0.0.nupkg.sha512",
+        "ocelot.provider.consul.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -12082,10 +12132,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Consul >= 1.6.10.6",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Ocelot >= 13.0.0"
+      "Ocelot >= 13.0.0",
+      "Ocelot.Provider.Consul >= 13.0.0"
     ]
   },
   "packageFolders": {
@@ -12096,11 +12148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FlightBooking\\ApiGatewayV2\\ApiGatewayV2.csproj",
+      "projectUniqueName": "D:\\FlightBookingMain\\FlightBooking\\ApiGatewayV2\\ApiGatewayV2.csproj",
       "projectName": "ApiGatewayV2",
-      "projectPath": "D:\\FlightBooking\\ApiGatewayV2\\ApiGatewayV2.csproj",
+      "projectPath": "D:\\FlightBookingMain\\FlightBooking\\ApiGatewayV2\\ApiGatewayV2.csproj",
       "packagesPath": "C:\\Users\\cogdotnet1090\\.nuget\\packages\\",
-      "outputPath": "D:\\FlightBooking\\ApiGatewayV2\\obj\\",
+      "outputPath": "D:\\FlightBookingMain\\FlightBooking\\ApiGatewayV2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -12135,6 +12187,10 @@
       "netcoreapp2.1": {
         "targetAlias": "netcoreapp2.1",
         "dependencies": {
+          "Consul": {
+            "target": "Package",
+            "version": "[1.6.10.6, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12153,6 +12209,10 @@
             "autoReferenced": true
           },
           "Ocelot": {
+            "target": "Package",
+            "version": "[13.0.0, )"
+          },
+          "Ocelot.Provider.Consul": {
             "target": "Package",
             "version": "[13.0.0, )"
           }

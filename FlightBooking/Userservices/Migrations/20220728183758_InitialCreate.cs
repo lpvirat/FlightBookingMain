@@ -25,7 +25,9 @@ namespace Userservices.Migrations
                     MealType = table.Column<string>(nullable: true),
                     SeatNumbers = table.Column<string>(nullable: true),
                     Pnr = table.Column<string>(nullable: true),
-                    IsCancelled = table.Column<int>(nullable: false)
+                    FinalPrice = table.Column<int>(nullable: false),
+                    IsCancelled = table.Column<int>(nullable: false),
+                    CouponApplied = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

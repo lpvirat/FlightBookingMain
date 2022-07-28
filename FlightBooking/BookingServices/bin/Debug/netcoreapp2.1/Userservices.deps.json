@@ -28,6 +28,7 @@
     ".NETCoreApp,Version=v2.1": {
       "Userservices/1.0.0": {
         "dependencies": {
+          "Consul": "1.6.10.6",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.EntityFrameworkCore": "2.1.14",
@@ -40,6 +41,20 @@
         },
         "compile": {
           "Userservices.dll": {}
+        }
+      },
+      "Consul/1.6.10.6": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Consul.dll": {
+            "assemblyVersion": "1.6.10.6",
+            "fileVersion": "1.6.10.6"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Consul.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -3207,6 +3222,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Consul/1.6.10.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rt0uQw8f8wtRDwp1B5NIemC094jbkOv3b3Jzy9HOc0FIAJhMEaSRpcZCzjLGKMvPAfw7TKxy07CiYMNXvbMARA==",
+      "path": "consul/1.6.10.6",
+      "hashPath": "consul.1.6.10.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",

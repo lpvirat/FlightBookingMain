@@ -1,95 +1,102 @@
 {
   "ReRoutes": [
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AdminServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/AdminLogin/AdminLogin",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8010"
-        }
-      ],
       "UpstreamPathTemplate": "/api/AdminLogin/AdminLogin",
       "UpstreamHttpMethod": [ "Post" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AdminServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/AddBlock/AllFlightDetails",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8010"
-        }
-      ],
+
       "UpstreamPathTemplate": "/api/AddBlock/AllFlightDetails",
       "UpstreamHttpMethod": [ "Get" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AdminServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/AddBlock/AddFlight",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8010"
-        }
-      ],
       "UpstreamPathTemplate": "/api/AddBlock/AddFlight",
       "UpstreamHttpMethod": [ "Post" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AdminServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/AddBlock/BlockFlight",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8010"
-        }
-      ],
       "UpstreamPathTemplate": "/api/AddBlock/BlockFlight",
       "UpstreamHttpMethod": [ "Delete" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AdminServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Schedule/ScheduleFlight",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8010"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Schedule/ScheduleFlight",
       "UpstreamHttpMethod": [ "Post" ]
+    },
 
+
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "AdminServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "DownstreamPathTemplate": "/api/Coupons/AddCoupon",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/Coupons/AddCoupon",
+      "UpstreamHttpMethod": [ "Post" ]
     },
 
 
 
+
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "UserServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/UserLogin/UserLogin",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8011"
-        }
-      ],
       "UpstreamPathTemplate": "/api/UserLogin/UserLogin",
       "UpstreamHttpMethod": [ "Post" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "UserServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Registration/RegisterUser",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8011"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Registration/RegisterUser",
       "UpstreamHttpMethod": [ "Post" ]
     },
@@ -97,103 +104,84 @@
 
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Booking/GetAllFlights",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8012"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Booking/GetAllFlights",
       "UpstreamHttpMethod": [ "Get" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Booking/GetFlightsBySearch",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8012"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Booking/GetFlightsBySearch",
       "UpstreamHttpMethod": [ "Post" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Booking/FlightTicketBooking",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8012"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Booking/FlightTicketBooking",
       "UpstreamHttpMethod": [ "Post" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Booking/CancelTicket",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8012"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Booking/CancelTicket",
       "UpstreamHttpMethod": [ "Put" ]
     },
 
     {
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
       "DownstreamPathTemplate": "/api/Booking/SearchTicket",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8012"
-        }
-      ],
       "UpstreamPathTemplate": "/api/Booking/SearchTicket",
       "UpstreamHttpMethod": [ "Get" ]
     },
 
-
-
-
-
     {
-      "DownstreamPathTemplate": "/Home/DBEmpDetails",
+      "UseServiceDiscovery": true,
+      "ServiceName": "BookingServices",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "DownstreamPathTemplate": "/api/Booking/AllCouponDetails",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8001"
-        }
-      ],
-      "UpstreamPathTemplate": "/emp",
-      "UpstreamMethod": [ "GET" ]
-    },
-
-    {
-      "DownstreamPathTemplate": "/api/values/GetValues",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": "8010"
-        }
-      ],
-      "UpstreamPathTemplate": "/value",
-      "UpstreamMethod": [ "GET" ]
+      "UpstreamPathTemplate": "/api/Booking/AllCouponDetails",
+      "UpstreamHttpMethod": [ "Get" ]
     }
-
   ],
+
   "GlobalConfiguration": {
-    "RequestIdKey": "OcRequestId",
-    "AdministrationPath": "/administration"
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
   }
+
 }

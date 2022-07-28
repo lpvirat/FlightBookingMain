@@ -28,16 +28,32 @@
     ".NETCoreApp,Version=v2.1": {
       "ApiGatewayV2/1.0.0": {
         "dependencies": {
+          "Consul": "1.6.10.6",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
-          "Ocelot": "13.0.0"
+          "Ocelot": "13.0.0",
+          "Ocelot.Provider.Consul": "13.0.0"
         },
         "runtime": {
           "ApiGatewayV2.dll": {}
         },
         "compile": {
           "ApiGatewayV2.dll": {}
+        }
+      },
+      "Consul/1.6.10.6": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Consul.dll": {
+            "assemblyVersion": "1.6.10.6",
+            "fileVersion": "1.6.10.6"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Consul.dll": {}
         }
       },
       "FluentValidation/7.6.104": {
@@ -74,6 +90,21 @@
         },
         "compile": {
           "lib/netstandard2.0/Ocelot.dll": {}
+        }
+      },
+      "Ocelot.Provider.Consul/13.0.0": {
+        "dependencies": {
+          "Consul": "1.6.10.6",
+          "Ocelot": "13.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ocelot.Provider.Consul.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Ocelot.Provider.Consul.dll": {}
         }
       },
       "System.ComponentModel/4.3.0": {
@@ -3210,6 +3241,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Consul/1.6.10.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rt0uQw8f8wtRDwp1B5NIemC094jbkOv3b3Jzy9HOc0FIAJhMEaSRpcZCzjLGKMvPAfw7TKxy07CiYMNXvbMARA==",
+      "path": "consul/1.6.10.6",
+      "hashPath": "consul.1.6.10.6.nupkg.sha512"
+    },
     "FluentValidation/7.6.104": {
       "type": "package",
       "serviceable": true,
@@ -3230,6 +3268,13 @@
       "sha512": "sha512-565i6/4+BZt0LyXnWTfZtm5WSH/8pZOsRzqoLQOdXdgpONLL9lBpEhcg/RutjNhYoaG78pvIvCwamuZN57rfaw==",
       "path": "ocelot/13.0.0",
       "hashPath": "ocelot.13.0.0.nupkg.sha512"
+    },
+    "Ocelot.Provider.Consul/13.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7Ngamd2ilIQPGj3dIcOXXXd+2dkAvzYlA9cY3Ms8MgJ5siw/qMP2KAwIx0ruQlKkdTxKa06ZzcLnmqhw5BAotg==",
+      "path": "ocelot.provider.consul/13.0.0",
+      "hashPath": "ocelot.provider.consul.13.0.0.nupkg.sha512"
     },
     "System.ComponentModel/4.3.0": {
       "type": "package",

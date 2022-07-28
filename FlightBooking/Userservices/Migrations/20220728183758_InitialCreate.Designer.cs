@@ -9,7 +9,7 @@ using Userservices.Models;
 namespace Userservices.Migrations
 {
     [DbContext(typeof(UserDBContext))]
-    [Migration("20220727153937_InitialCreate")]
+    [Migration("20220728183758_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,13 @@ namespace Userservices.Migrations
 
                     b.Property<string>("BoardingTime");
 
+                    b.Property<string>("CouponApplied");
+
                     b.Property<string>("Destination");
 
                     b.Property<string>("EmailId");
+
+                    b.Property<int>("FinalPrice");
 
                     b.Property<string>("Gender");
 

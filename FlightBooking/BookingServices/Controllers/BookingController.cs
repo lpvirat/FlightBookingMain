@@ -31,7 +31,7 @@ namespace BookingServices.Controllers
         public IList<Flights> GetFlightsBySearch([FromBody] Flights obj)
         {
             var db = new AdminDBContext();
-            var flights = db.Flights.Where(t => t.Source == obj.Source && t.Destination == obj.Destination && t.TypeOfTrip == obj.TypeOfTrip).ToList();
+            var flights = db.Flights.Where(t => t.Source.ToLower() == obj.Source.ToLower() && t.Destination.ToLower() == obj.Destination.ToLower() && t.TypeOfTrip.ToLower() == obj.TypeOfTrip.ToLower()).ToList();
 
             return flights;
         }
@@ -55,6 +55,7 @@ namespace BookingServices.Controllers
                 var admindb = new AdminDBContext();
                 var userDetails = db.UserCredentials.Where(x => x.UserName == ticket.UserName).FirstOrDefault();
                 var flight = admindb.Flights.Where(x => x.FlightId == ticket.AirlineId).FirstOrDefault();
+                var couponCode = admindb.Coupon.Where(x => x.CouponName == ticket.CouponApplied).FirstOrDefault();
                 if (flight != null)
                 {
                     ticket.BoardingTime = flight.StartTime.ToString();
@@ -62,6 +63,7 @@ namespace BookingServices.Controllers
                     ticket.Destination = flight.Destination;
                     ticket.MealType = flight.MealType;
                     ticket.EmailId = userDetails.Email;
+                    ticket.Age = userDetails.Age;
 
                     Random random = new Random();
                     //int seatNo = random.Next(00,99);
@@ -69,6 +71,16 @@ namespace BookingServices.Controllers
                     pnr = "PNR" + pnrID;
                     ticket.Pnr = pnr;
                     ticket.IsCancelled = 0;
+
+                    if(couponCode!=null)
+                    {
+                        int discountedPrice = (int)(flight.Price - (flight.Price * couponCode.Discount / 100));
+                        ticket.FinalPrice = discountedPrice;
+                    }
+                    else
+                    {
+                        ticket.FinalPrice = flight.Price;
+                    }
 
                     db.TicketBooking.Add(ticket);
                     db.SaveChanges();
@@ -155,6 +167,17 @@ namespace BookingServices.Controllers
                         Message = "Please enter valid PNR number and emailId",
                     });
                 }
+            }
+        }
+
+        [Authorize]
+        [HttpGet]
+        [Route("AllCouponDetails")]
+        public List<Coupons> AllCouponDetails()
+        {
+            using (var db = new AdminDBContext())
+            {
+                return db.Coupon.ToList();
             }
         }
     }

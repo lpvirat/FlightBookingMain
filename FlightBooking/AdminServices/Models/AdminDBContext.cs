@@ -22,6 +22,7 @@ namespace AdminServices.Models
         public virtual DbSet<AdminCredentials> AdminCredentials { get; set; }
         public virtual DbSet<AirlineAddBlock> AirlineaddBlock { get; set; }
         public virtual DbSet<Flights> Flights { get; set; }
+        public virtual DbSet<Coupons> Coupon { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

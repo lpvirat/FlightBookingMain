@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FlightBooking\\AdminServices\\AdminServices.csproj": {}
+    "D:\\FlightBookingMain\\FlightBooking\\AdminServices\\AdminServices.csproj": {}
   },
   "projects": {
-    "D:\\FlightBooking\\AdminServices\\AdminServices.csproj": {
+    "D:\\FlightBookingMain\\FlightBooking\\AdminServices\\AdminServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FlightBooking\\AdminServices\\AdminServices.csproj",
+        "projectUniqueName": "D:\\FlightBookingMain\\FlightBooking\\AdminServices\\AdminServices.csproj",
         "projectName": "AdminServices",
-        "projectPath": "D:\\FlightBooking\\AdminServices\\AdminServices.csproj",
+        "projectPath": "D:\\FlightBookingMain\\FlightBooking\\AdminServices\\AdminServices.csproj",
         "packagesPath": "C:\\Users\\cogdotnet1090\\.nuget\\packages\\",
-        "outputPath": "D:\\FlightBooking\\AdminServices\\obj\\",
+        "outputPath": "D:\\FlightBookingMain\\FlightBooking\\AdminServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -46,6 +46,10 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.10.6, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",

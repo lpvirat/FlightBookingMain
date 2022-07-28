@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "L+ZSRo/AwPoLgPNvCn4ycMjyNwOLojrCEVC0R19JuEji5jDOlRB6g1Lz7XLvTkka4qp2oeDCntacxKeLyng/bA==",
+  "dgSpecHash": "hgWy8h7oCi0RD0YXwFdU8QL4jQBagEja0UbdGx0pTjPIr+byrzvp1Hp1Tm3029cZEMeIVSV3AiCdykqL5dM0dg==",
   "success": true,
-  "projectFilePath": "D:\\FlightBooking\\ApiGatewayV2\\ApiGatewayV2.csproj",
+  "projectFilePath": "D:\\FlightBookingMain\\FlightBooking\\ApiGatewayV2\\ApiGatewayV2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\cogdotnet1090\\.nuget\\packages\\consul\\1.6.10.6\\consul.1.6.10.6.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\fluentvalidation\\7.6.104\\fluentvalidation.7.6.104.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
@@ -174,6 +175,7 @@
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\ocelot\\13.0.0\\ocelot.13.0.0.nupkg.sha512",
+    "C:\\Users\\cogdotnet1090\\.nuget\\packages\\ocelot.provider.consul\\13.0.0\\ocelot.provider.consul.13.0.0.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\remotion.linq\\2.2.0\\remotion.linq.2.2.0.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\cogdotnet1090\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

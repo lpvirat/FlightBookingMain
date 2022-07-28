@@ -30,9 +30,13 @@ namespace Userservices.Migrations
 
                     b.Property<string>("BoardingTime");
 
+                    b.Property<string>("CouponApplied");
+
                     b.Property<string>("Destination");
 
                     b.Property<string>("EmailId");
+
+                    b.Property<int>("FinalPrice");
 
                     b.Property<string>("Gender");
 
