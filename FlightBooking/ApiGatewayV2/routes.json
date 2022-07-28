@@ -1,0 +1,199 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/AdminLogin/AdminLogin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8010"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/AdminLogin/AdminLogin",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/AddBlock/AllFlightDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8010"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/AddBlock/AllFlightDetails",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/AddBlock/AddFlight",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8010"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/AddBlock/AddFlight",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/AddBlock/BlockFlight",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8010"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/AddBlock/BlockFlight",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Schedule/ScheduleFlight",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8010"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Schedule/ScheduleFlight",
+      "UpstreamHttpMethod": [ "Post" ]
+
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/UserLogin/UserLogin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8011"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/UserLogin/UserLogin",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Registration/RegisterUser",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8011"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Registration/RegisterUser",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/GetAllFlights",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8012"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Booking/GetAllFlights",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/GetFlightsBySearch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8012"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Booking/GetFlightsBySearch",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/FlightTicketBooking",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8012"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Booking/FlightTicketBooking",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/CancelTicket",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8012"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Booking/CancelTicket",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Booking/SearchTicket",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8012"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Booking/SearchTicket",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+
+
+
+
+    {
+      "DownstreamPathTemplate": "/Home/DBEmpDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8001"
+        }
+      ],
+      "UpstreamPathTemplate": "/emp",
+      "UpstreamMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/values/GetValues",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8010"
+        }
+      ],
+      "UpstreamPathTemplate": "/value",
+      "UpstreamMethod": [ "GET" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}
