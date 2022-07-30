@@ -37,6 +37,18 @@ namespace AdminServices.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Coupon",
+                columns: table => new
+                {
+                    CouponName = table.Column<string>(nullable: false),
+                    Discount = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Coupon", x => x.CouponName);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Flights",
                 columns: table => new
                 {
@@ -69,6 +81,9 @@ namespace AdminServices.Migrations
 
             migrationBuilder.DropTable(
                 name: "AirlineaddBlock");
+
+            migrationBuilder.DropTable(
+                name: "Coupon");
 
             migrationBuilder.DropTable(
                 name: "Flights");

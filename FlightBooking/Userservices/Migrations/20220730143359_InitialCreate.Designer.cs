@@ -9,7 +9,7 @@ using Userservices.Models;
 namespace Userservices.Migrations
 {
     [DbContext(typeof(UserDBContext))]
-    [Migration("20220728183758_InitialCreate")]
+    [Migration("20220730143359_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,8 @@ namespace Userservices.Migrations
 
                     b.Property<string>("AirlineId");
 
+                    b.Property<string>("AirlineName");
+
                     b.Property<string>("BoardingTime");
 
                     b.Property<string>("CouponApplied");
@@ -45,8 +47,6 @@ namespace Userservices.Migrations
                     b.Property<int>("IsCancelled");
 
                     b.Property<string>("MealType");
-
-                    b.Property<string>("Name");
 
                     b.Property<string>("Pnr");
 

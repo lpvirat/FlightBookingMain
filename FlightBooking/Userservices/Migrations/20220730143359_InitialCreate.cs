@@ -14,10 +14,10 @@ namespace Userservices.Migrations
                     UserId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AirlineId = table.Column<string>(nullable: true),
+                    AirlineName = table.Column<string>(nullable: true),
                     BoardingTime = table.Column<string>(nullable: true),
                     UserName = table.Column<string>(nullable: true),
                     EmailId = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
                     Gender = table.Column<string>(nullable: true),
                     Age = table.Column<int>(nullable: false),
                     Source = table.Column<string>(nullable: true),

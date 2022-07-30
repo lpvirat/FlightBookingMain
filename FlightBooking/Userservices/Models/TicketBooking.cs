@@ -11,10 +11,11 @@ namespace Userservices.Models
         [Key]
         public int UserId { get; set; }
         public string AirlineId { get; set; }
+        public string AirlineName { get; set; }
+
         public string BoardingTime { get; set; }
         public string UserName { get; set; }
         public string EmailId { get; set; }
-        public string Name { get; set; }
         public string Gender { get; set; }
         public int Age { get; set; }
         public string Source { get; set; }

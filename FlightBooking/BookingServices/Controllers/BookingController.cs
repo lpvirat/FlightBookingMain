@@ -42,8 +42,7 @@ namespace BookingServices.Controllers
         public IActionResult InsertTicketBooking([FromBody] TicketBooking ticket)
         {
             string pnr = string.Empty;
-            if (string.IsNullOrEmpty(ticket.AirlineId) || string.IsNullOrEmpty(ticket.UserName) || string.IsNullOrEmpty(ticket.Name)
-                                                       || string.IsNullOrEmpty(ticket.Gender) || string.IsNullOrEmpty(ticket.SeatNumbers))
+            if (string.IsNullOrEmpty(ticket.AirlineId) || string.IsNullOrEmpty(ticket.UserName) || string.IsNullOrEmpty(ticket.Gender) || string.IsNullOrEmpty(ticket.SeatNumbers))
                 return NotFound(new
                 {
                     success = 0,
@@ -53,11 +52,12 @@ namespace BookingServices.Controllers
             {
                 var db = new UserDBContext();
                 var admindb = new AdminDBContext();
-                var userDetails = db.UserCredentials.Where(x => x.UserName == ticket.UserName).FirstOrDefault();
+                var userDetails = db.UserCredentials.Where(x => x.UserName.ToLower() == ticket.UserName.ToLower()).FirstOrDefault();
                 var flight = admindb.Flights.Where(x => x.FlightId == ticket.AirlineId).FirstOrDefault();
                 var couponCode = admindb.Coupon.Where(x => x.CouponName == ticket.CouponApplied).FirstOrDefault();
                 if (flight != null)
                 {
+                    ticket.AirlineName = flight.FlightName;
                     ticket.BoardingTime = flight.StartTime.ToString();
                     ticket.Source = flight.Source;
                     ticket.Destination = flight.Destination;
@@ -72,14 +72,15 @@ namespace BookingServices.Controllers
                     ticket.Pnr = pnr;
                     ticket.IsCancelled = 0;
 
-                    if(couponCode!=null)
+                    if(string.IsNullOrEmpty(ticket.CouponApplied))
                     {
-                        int discountedPrice = (int)(flight.Price - (flight.Price * couponCode.Discount / 100));
-                        ticket.FinalPrice = discountedPrice;
+                        ticket.FinalPrice = flight.Price;
                     }
                     else
                     {
-                        ticket.FinalPrice = flight.Price;
+                        int discountedPrice = (int)(flight.Price - (flight.Price * couponCode.Discount / 100));
+                        ticket.FinalPrice = discountedPrice;
+                       
                     }
 
                     db.TicketBooking.Add(ticket);
@@ -127,7 +128,7 @@ namespace BookingServices.Controllers
         [Route("CancelTicket")]
         public IActionResult CancelTicket([FromBody] TicketBooking cancelTicket)
         {
-            if (string.IsNullOrEmpty(cancelTicket.Pnr) && string.IsNullOrEmpty(cancelTicket.EmailId))
+            if (string.IsNullOrEmpty(cancelTicket.Pnr))
                 return Ok(new
                 {
                     success = 0,
@@ -136,7 +137,7 @@ namespace BookingServices.Controllers
             else
             {
                 var db = new UserDBContext();
-                var ticket = db.TicketBooking.Where(t => t.Pnr == cancelTicket.Pnr && t.EmailId == cancelTicket.EmailId).FirstOrDefault();
+                var ticket = db.TicketBooking.Where(t => t.Pnr == cancelTicket.Pnr).FirstOrDefault();
            
 
                 if (ticket != null )

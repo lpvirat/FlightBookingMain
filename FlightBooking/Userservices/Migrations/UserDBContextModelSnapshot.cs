@@ -28,6 +28,8 @@ namespace Userservices.Migrations
 
                     b.Property<string>("AirlineId");
 
+                    b.Property<string>("AirlineName");
+
                     b.Property<string>("BoardingTime");
 
                     b.Property<string>("CouponApplied");
@@ -43,8 +45,6 @@ namespace Userservices.Migrations
                     b.Property<int>("IsCancelled");
 
                     b.Property<string>("MealType");
-
-                    b.Property<string>("Name");
 
                     b.Property<string>("Pnr");
 
