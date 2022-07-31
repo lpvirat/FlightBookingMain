@@ -43,7 +43,7 @@ namespace BookingServices.Controllers
         {
             string pnr = string.Empty;
             if (string.IsNullOrEmpty(ticket.AirlineId) || string.IsNullOrEmpty(ticket.UserName) || string.IsNullOrEmpty(ticket.Gender) || string.IsNullOrEmpty(ticket.SeatNumbers))
-                return NotFound(new
+                return Ok(new
                 {
                     success = 0,
                     message = "Please enter valid details"
@@ -94,7 +94,7 @@ namespace BookingServices.Controllers
                 }
                 else
                 {
-                    return NotFound(new
+                    return Ok(new
                     {
                         success = 0,
                         message = "Please enter valid AirlineId"
@@ -132,7 +132,7 @@ namespace BookingServices.Controllers
                 return Ok(new
                 {
                     success = 0,
-                    Message = "Please enter PNR number and EmailId properly",
+                    Message = "Please enter PNR number properly",
                 });
             else
             {
@@ -165,7 +165,7 @@ namespace BookingServices.Controllers
                     return Ok(new
                     {
                         success = 0,
-                        Message = "Please enter valid PNR number and emailId",
+                        Message = "Please enter valid PNR number ",
                     });
                 }
             }

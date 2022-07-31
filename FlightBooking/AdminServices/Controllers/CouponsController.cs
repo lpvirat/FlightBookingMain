@@ -19,24 +19,38 @@ namespace AdminServices.Controllers
         [Route("AddCoupon")]
         public IActionResult AddCoupon([FromBody] Coupons data)
         {
-            if (string.IsNullOrEmpty(data.CouponName) && (data.Discount < 0))
+            if (string.IsNullOrEmpty(data.CouponName) || data.CouponName == "" || data.Discount <= 0)
                 return Ok(new
                 {
                     success = 0,
                     Message = "Please enter Coupon and discount properly",
                 });
+
             else
             {
                 using (var db = new AdminDBContext())
                 {
-                    db.Coupon.Add(data);
-                    db.SaveChanges();
-                    return Ok(new
+                    var couponcode = db.Coupon.Where(x => x.CouponName == data.CouponName).FirstOrDefault();
+                    if (couponcode!=null)
                     {
-                        success = 1,
-                        message = "Coupon added Successfully"
+                        return Ok(new
+                        {
+                            success = 0,
+                            Message = "Coupon already exists",
+                        });
+                    }
+                    else
+                    {
+                        db.Coupon.Add(data);
+                        db.SaveChanges();
+                        return Ok(new
+                        {
+                            success = 1,
+                            message = "Coupon added Successfully"
 
-                    });
+                        });
+                    }
+                   
                 }
             }
         }

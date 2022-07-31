@@ -46,44 +46,55 @@ namespace AdminServices.Controllers
         [Authorize]
         [HttpDelete]
         [Route("BlockFlight")]
-        public IActionResult BlockFlight(string airline_ID)
+        public IActionResult BlockFlight(string airlineId)
         {
-            var db = new AdminDBContext();
+            
 
-            if (string.IsNullOrEmpty(airline_ID))
+            if (string.IsNullOrEmpty(airlineId))
             {
-                return NotFound(new
+                return Ok(new
                 {
                     success = 0,
                     message = "Please enter valid AirlineId"
                 });
             }
+           
             
             else
             {
-
-                var airline = db.AirlineaddBlock.Where(x => x.AirlineId == airline_ID).FirstOrDefault();
-                var flight = db.Flights.Where(x => x.FlightId == airline_ID).FirstOrDefault();
-                if(airline!= null)
+                using (var db = new AdminDBContext())
                 {
-                    db.AirlineaddBlock.Remove(airline);
-                    db.Flights.Remove(flight);
-                    db.SaveChanges();
-                    return Ok(new
-                    {
-                        success = 1,
-                        message = "Airline " + airline_ID + " removed Successfully"
 
-                    });
-                }
-                else
-                {
-                    return NotFound(new
+                    var airline = db.AirlineaddBlock.Where(x => x.AirlineId == airlineId).FirstOrDefault();
+                    var flight = db.Flights.Where(x => x.FlightId == airlineId).FirstOrDefault();
+
+                    if(airline!= null)
                     {
-                        success = 0,
-                        message = "Please enter valid AirlineId"
-                    });
+                        db.AirlineaddBlock.Remove(airline);
+                        if (flight != null)
+                        {
+                            db.Flights.Remove(flight);
+                        }
+                        db.SaveChanges();
+                        return Ok(new
+                        {
+                            success = 1,
+                            message = "Airline " + airlineId + " removed Successfully"
+
+                        });
+                    }
+                    else
+                    {
+                        return Ok(new
+                        {
+                            success = 0,
+                            message = "Please enter valid AirlineId"
+                        });
+                    }
+                    
+
                 }
+              
             }
         }
     }
