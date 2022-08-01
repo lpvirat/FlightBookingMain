@@ -28,7 +28,7 @@ namespace ServiceDiscovery.Config
                 ID = "BookingID1",
                 Name= "BookingServices",
                 Address="localhost",
-                Port= 8012
+                Port= 8013
             };
             logger.LogInformation("Registering with Consul");
             consulclient.Agent.ServiceDeregister(registration.ID).ConfigureAwait(true);

@@ -71,10 +71,12 @@ namespace AdminServices.Controllers
                     if(airline!= null)
                     {
                         db.AirlineaddBlock.Remove(airline);
+
                         if (flight != null)
                         {
                             db.Flights.Remove(flight);
                         }
+
                         db.SaveChanges();
                         return Ok(new
                         {
