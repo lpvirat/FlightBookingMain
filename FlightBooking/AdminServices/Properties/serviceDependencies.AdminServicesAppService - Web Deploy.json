@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/publishtestapiappdbserver/databases/AdminDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:Admin_Database",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

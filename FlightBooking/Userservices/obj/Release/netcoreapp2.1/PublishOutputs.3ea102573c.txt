@@ -1,0 +1,15 @@
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.Development.json
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.json
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Userservices.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Userservices.runtimeconfig.json
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Userservices.pdb
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Consul.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Design.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Remotion.Linq.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\System.Interactive.Async.dll
+D:\FlightBookingMain\FlightBooking\Userservices\obj\Release\netcoreapp2.1\PubTmp\Out\Userservices.deps.json

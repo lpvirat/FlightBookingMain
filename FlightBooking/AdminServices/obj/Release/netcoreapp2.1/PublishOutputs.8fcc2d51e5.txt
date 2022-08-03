@@ -1,0 +1,8 @@
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.Development.json
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.json
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\AdminServices.dll
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\AdminServices.runtimeconfig.json
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\AdminServices.pdb
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\Consul.dll
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\RabbitMQ.Client.dll
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Release\netcoreapp2.1\PubTmp\Out\AdminServices.deps.json

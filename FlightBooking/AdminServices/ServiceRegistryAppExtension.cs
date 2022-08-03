@@ -28,7 +28,7 @@ namespace ServiceDiscovery.Config
                 ID = "AdminID1",
                 Name= "AdminServices",
                 Address="localhost",
-                Port= 8010
+                Port= 27140
             };
             logger.LogInformation("Registering with Consul");
             consulclient.Agent.ServiceDeregister(registration.ID).ConfigureAwait(true);

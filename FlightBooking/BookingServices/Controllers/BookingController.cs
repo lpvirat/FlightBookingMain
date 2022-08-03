@@ -1,4 +1,4 @@
-﻿using AdminServices.Models;
+﻿using BookingServices.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Userservices.Models;
 
 namespace BookingServices.Controllers
 {
@@ -72,7 +71,7 @@ namespace BookingServices.Controllers
                     ticket.Pnr = pnr;
                     ticket.IsCancelled = 0;
 
-                    if(string.IsNullOrEmpty(ticket.CouponApplied))
+                    if (string.IsNullOrEmpty(ticket.CouponApplied))
                     {
                         ticket.FinalPrice = flight.Price;
                     }
@@ -80,7 +79,7 @@ namespace BookingServices.Controllers
                     {
                         int discountedPrice = (int)(flight.Price - (flight.Price * couponCode.Discount / 100));
                         ticket.FinalPrice = discountedPrice;
-                       
+
                     }
 
                     db.TicketBooking.Add(ticket);
@@ -138,9 +137,9 @@ namespace BookingServices.Controllers
             {
                 var db = new UserDBContext();
                 var ticket = db.TicketBooking.Where(t => t.Pnr == cancelTicket.Pnr).FirstOrDefault();
-           
 
-                if (ticket != null )
+
+                if (ticket != null)
                 {
                     if (ticket.IsCancelled == 1)
                     {

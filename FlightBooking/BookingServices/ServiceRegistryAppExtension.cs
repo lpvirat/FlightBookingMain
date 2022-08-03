@@ -9,7 +9,7 @@ namespace ServiceDiscovery.Config
 {
     public static class ServiceRegistryAppExtension
     {
-        public static IServiceCollection AddConsulConfiguration(this IServiceCollection services)
+        public static IServiceCollection AddConsulConfig(this IServiceCollection services)
         {
             string ConsulAddress = "http://localhost:8500/";
             services.AddSingleton<IConsulClient, ConsulClient>(p => new ConsulClient(consulConfig =>
@@ -18,7 +18,7 @@ namespace ServiceDiscovery.Config
             }));
             return services;
         }
-        public static IApplicationBuilder UseConsulconfig(this IApplicationBuilder app)
+        public static IApplicationBuilder UseConsul(this IApplicationBuilder app)
         {
             var consulclient = app.ApplicationServices.GetRequiredService<IConsulClient>();
             var logger = app.ApplicationServices.GetRequiredService<ILoggerFactory>().CreateLogger("AppExtensions");
@@ -28,7 +28,7 @@ namespace ServiceDiscovery.Config
                 ID = "BookingID1",
                 Name= "BookingServices",
                 Address="localhost",
-                Port= 8013
+                Port= 9291
             };
             logger.LogInformation("Registering with Consul");
             consulclient.Agent.ServiceDeregister(registration.ID).ConfigureAwait(true);

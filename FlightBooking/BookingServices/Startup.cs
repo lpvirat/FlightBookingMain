@@ -50,8 +50,7 @@ namespace BookingServices
                 });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddConsulConfiguration();
-            
+            services.AddConsulConfig();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,9 +72,9 @@ namespace BookingServices
             });
 
             app.UseAuthentication();
-
             app.UseMvc();
-            app.UseConsulconfig();
+            app.UseConsul();
+
         }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,12 +79,23 @@ namespace AdminServices.Controllers
                         }
 
                         db.SaveChanges();
+
+                        var factory = new ConnectionFactory
+                        {
+                            Uri = new Uri("amqp://guest:guest@localhost:5672")
+                        };
+                        var connection = factory.CreateConnection();
+                        var channel = connection.CreateModel();
+                        Producer.Publish(channel,airline.AirlineId);
+
                         return Ok(new
                         {
                             success = 1,
                             message = "Airline " + airlineId + " removed Successfully"
 
                         });
+
+                       
                     }
                     else
                     {
@@ -98,6 +110,7 @@ namespace AdminServices.Controllers
                 }
               
             }
+
         }
     }
 }
