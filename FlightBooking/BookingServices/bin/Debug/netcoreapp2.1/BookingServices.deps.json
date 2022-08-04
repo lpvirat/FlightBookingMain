@@ -34,7 +34,8 @@
           "Microsoft.EntityFrameworkCore": "2.1.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.14",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.14",
-          "Microsoft.NETCore.App": "2.1.0"
+          "Microsoft.NETCore.App": "2.1.0",
+          "RabbitMQ.Client": "5.2.0"
         },
         "runtime": {
           "BookingServices.dll": {}
@@ -140,6 +141,17 @@
       "Microsoft.EntityFrameworkCore.Tools/2.1.14": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "2.1.14"
+        }
+      },
+      "RabbitMQ.Client/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3285,6 +3297,13 @@
       "sha512": "sha512-nOmDXgV65mEJ9+dLeO4yRay87tQj4ALBzfBuFph2j+joBo2IZJoj1KgdImu/jKprKLOTbTKnE2wbnRWh/1hX/w==",
       "path": "microsoft.entityframeworkcore.tools/2.1.14",
       "hashPath": "microsoft.entityframeworkcore.tools.2.1.14.nupkg.sha512"
+    },
+    "RabbitMQ.Client/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WY73qFhekwALxI+YTf97WkeWjnQXZFjkSc1oCwZ7Pz/XwOthBotr9ty3DhU2F7GuzU0HHyO9z9uW6AXr+TyhLQ==",
+      "path": "rabbitmq.client/5.2.0",
+      "hashPath": "rabbitmq.client.5.2.0.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

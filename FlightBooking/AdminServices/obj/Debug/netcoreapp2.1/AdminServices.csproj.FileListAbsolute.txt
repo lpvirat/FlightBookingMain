@@ -23,6 +23,7 @@ D:\FlightBookingMain\FlightBooking\AdminServices\bin\Debug\netcoreapp2.1\AdminSe
 D:\FlightBookingMain\FlightBooking\AdminServices\bin\Debug\netcoreapp2.1\AdminServices.runtimeconfig.dev.json
 D:\FlightBookingMain\FlightBooking\AdminServices\bin\Debug\netcoreapp2.1\AdminServices.dll
 D:\FlightBookingMain\FlightBooking\AdminServices\bin\Debug\netcoreapp2.1\AdminServices.pdb
+D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.csproj.AssemblyReference.cache
 D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.GeneratedMSBuildEditorConfig.editorconfig
 D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.AssemblyInfoInputs.cache
 D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.AssemblyInfo.cs
@@ -33,4 +34,3 @@ D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminSe
 D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.dll
 D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.pdb
 D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.genruntimeconfig.cache
-D:\FlightBookingMain\FlightBooking\AdminServices\obj\Debug\netcoreapp2.1\AdminServices.csproj.AssemblyReference.cache

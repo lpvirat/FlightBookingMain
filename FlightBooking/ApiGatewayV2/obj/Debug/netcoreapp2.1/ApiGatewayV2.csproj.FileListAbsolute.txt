@@ -25,6 +25,7 @@ D:\FlightBookingMain\FlightBooking\ApiGatewayV2\bin\Debug\netcoreapp2.1\ApiGatew
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\bin\Debug\netcoreapp2.1\ApiGatewayV2.runtimeconfig.dev.json
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\bin\Debug\netcoreapp2.1\ApiGatewayV2.dll
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\bin\Debug\netcoreapp2.1\ApiGatewayV2.pdb
+D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.csproj.AssemblyReference.cache
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.GeneratedMSBuildEditorConfig.editorconfig
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.AssemblyInfoInputs.cache
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.AssemblyInfo.cs
@@ -35,4 +36,3 @@ D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatew
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.dll
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.pdb
 D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.genruntimeconfig.cache
-D:\FlightBookingMain\FlightBooking\ApiGatewayV2\obj\Debug\netcoreapp2.1\ApiGatewayV2.csproj.AssemblyReference.cache

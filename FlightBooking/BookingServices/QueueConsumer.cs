@@ -1,5 +1,6 @@
 ﻿using BookingServices.Models;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -44,19 +45,10 @@ namespace BookingServices
             consumer.Received += (sender, e) =>
             {
 
-                var body = e.Body;
-
+                var body = e.Body.ToArray();
                 var message = Encoding.UTF32.GetString(body);
+                flightid = (string)JsonConvert.DeserializeObject(message);
 
-                flightid = message.Replace(@"\", string.Empty);
-
-                // flightid = Regex.Unescape(message);
-
-                //flightid = (string)JObject.Parse(message);
-
-                //flightid = msg[0].Substring(1);
-
-                //new UpdateController(_serviceProvider).UpdateBookingStatus(flightid);
                 UpdateBookingStatus(flightid);
             };
 
@@ -79,15 +71,19 @@ namespace BookingServices
         {
             using (var db = new UserDBContext())
             {
-                string airlineid = flightid.Replace(@"\", string.Empty);
-                var entity = db.TicketBooking.FirstOrDefault(x => x.AirlineId == airlineid);
+                
+                var entity = db.TicketBooking.Where(x => x.AirlineId == flightid).ToList();
 
                 if (entity != null)
                 {
-                    entity.IsCancelled = 1;
-                    db.SaveChanges();
+                    foreach(var row in entity)
+                    {
+                        row.IsCancelled = 1;
+                        db.SaveChanges();
+                    }
+                   
                 }
-                //return "Updated Succesfully";
+                
             }
 
 

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/publishtestapiappdbserver/databases/AdminDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:UserDatabase",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/publishtestapiappdbserver/databases/AdminDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:AdminDatabase",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

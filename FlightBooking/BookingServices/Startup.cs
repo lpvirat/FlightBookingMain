@@ -29,6 +29,8 @@ namespace BookingServices
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            services.AddHostedService<QueueConsumer>();
+            services.AddHttpContextAccessor();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(jwtOptions =>
