@@ -3,6 +3,12 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:Admin_Database"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:AdminDatabase",
+      "suggestion": "true",
+      "ignored": "true"
     }
   }
 }

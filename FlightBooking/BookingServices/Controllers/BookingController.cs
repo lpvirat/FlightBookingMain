@@ -76,10 +76,9 @@ namespace BookingServices.Controllers
                         ticket.FinalPrice = flight.Price;
                     }
                     else
-                    {
-                        int discountedPrice = (int)(flight.Price - (flight.Price * couponCode.Discount / 100));
-                        ticket.FinalPrice = discountedPrice;
-
+                    {                       
+                            int discountedPrice = (int)(flight.Price - (flight.Price * couponCode.Discount / 100));
+                            ticket.FinalPrice = discountedPrice;                        
                     }
 
                     db.TicketBooking.Add(ticket);

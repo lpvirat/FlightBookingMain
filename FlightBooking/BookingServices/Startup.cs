@@ -29,8 +29,6 @@ namespace BookingServices
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddHostedService<QueueConsumer>();
-            services.AddHttpContextAccessor();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(jwtOptions =>
@@ -53,6 +51,8 @@ namespace BookingServices
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddConsulConfig();
+           // services.AddHostedService<QueueConsumer>();
+            //services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
